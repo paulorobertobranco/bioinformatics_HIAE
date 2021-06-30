@@ -84,8 +84,8 @@ class Chromosome:
         :param reads: list of reads
         :return: chromosome
         """
-        reads = sorted(reads, key=len)
 
+        reads = sorted(reads, key=len)
         while len(reads) != 1:
 
             seq_a = reads[0]
@@ -103,7 +103,6 @@ class Chromosome:
                 if alignments:
                     no_gap_alignment = alignments[0]
                     if best_score < no_gap_alignment.score:
-
                         if len(no_gap_alignment.aligned[0]) != 1:
                             continue
 
@@ -124,7 +123,7 @@ class Chromosome:
                 query_reads.remove(best_query)
                 reads = query_reads + [best_alignment]
             else:
-                reads = [seq_a] + query_reads
+                raise Exception(f"Read {seq_a} didn't align with no one of the other reads {query_reads}.")
 
         return reads.pop() if reads else ""
 
