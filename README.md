@@ -2,7 +2,7 @@
 
 ## About
 
-Implementation of **question 5** of HIAE challenge.
+Implementation of **HIAE challenge | question 5**.
 
 ## Problem Definition
 
