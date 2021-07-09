@@ -19,7 +19,7 @@ def generate_input(number_of_reads=10, read_length=50):
             chromosome += seq[-read_length//2:]
         seqs.append(seq + '\n')
     shuffle(seqs)
-    with open('example_data/generated_input.txt', 'w') as file:
+    with open('generated_input.txt', 'w') as file:
         file.writelines(seqs)
 
     return chromosome
