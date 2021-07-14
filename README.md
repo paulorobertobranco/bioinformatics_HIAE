@@ -46,7 +46,7 @@ A file named `output.txt` will be created in the
 current directory containing the resulting
 chromosome.
 
-## Tests
+## Test
 
 To run the test suite, simple run:
 ```python
